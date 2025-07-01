@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support ticket</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -13,7 +14,7 @@
         <form id="supportForm" class="support-form">
             <div class="form-group">
                 <label for="asset">Which asset?</label>
-                <input type="text" id="asset" name="asset" placeholder="Enter asset name here..." required>
+                <input type="text" id="asset" name="asset" placeholder="Enter the asset name here..." required>
             </div>
 
             <div class="form-group">
@@ -23,7 +24,7 @@
 
             <div class="form-group">
                 <label for="details">Details</label>
-                <textarea id="details" name="details" rows="6" placeholder="Detailed information about your issue" required></textarea>
+                <textarea id="details" name="details" rows="6" placeholder="Provide detailed information about your issue..." required></textarea>
             </div>
 
             <div class="form-group">
@@ -31,7 +32,7 @@
                 <input type="email" id="email" name="email" placeholder="your@email.com" required>
             </div>
 
-            <button type="submit" class="submit-btn">Send Support Request</button>
+            <button type="submit" class="submit-btn" id="submitBtn">Send Support Request</button>
         </form>
 
         <div id="statusMessage" class="status-message"></div>
